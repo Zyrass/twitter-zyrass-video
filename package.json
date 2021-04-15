@@ -1,0 +1,24 @@
+{
+  "name": "01-twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PASSWORD=demo1234 node server.js",
+    "dev": "PASSWORD=demo1234 PORT=3000 nodemon server.js",
+    "convert": "html2pug < ./utils/convert/enter.html > ./utils/convert/out.pug -f"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "html2pug": "^4.0.0",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2"
+  }
+}

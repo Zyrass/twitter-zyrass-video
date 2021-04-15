@@ -1,0 +1,18 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+  .container
+    a.navbar-brand(href='/')
+      img(src="/images/Twitter.png", alt="Logo twitter", width="30" height="24")
+    
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#myNav' aria-controls='myNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    
+    div.collapse.navbar-collapse#myNav
+      
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.btn.btn-outline-warning(href='/tweets') Voir la liste des Tweets
+        li.nav-item.px-2
+          a.btn.btn-outline-info(href='/tweets/new') Un truc à dire !?
+        
+        li.nav-item
+          a.nav-link.disabled.text-secondary(href='#' tabindex='-1' aria-disabled='true') Connexion
