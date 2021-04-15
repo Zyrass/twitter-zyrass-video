@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+
+  .row.mb-5
+    h1.text-center.my-5.text-white Liste des Tweets
+
+    .offset-md-1.col-md-2
+      .card.bg-light.mb-3
+        .card-header
+          h4 Profil
+        .card-body
+          figure(id="avatar")
+            img(src="/images/avatar.jpg", alt="Avatar utilisateur", class="img-fluid")
+            figcaption.py-2
+              ul 
+                li 
+                  span Rôle :
+                  span.badge.bg-danger Administrateur 
+                li 
+                  span NB de Tweets :
+                  span.badge.bg-primary 69
+
+    .col-md-6
+
+      if counter < 1
+        .alert.alert-info.text-center.p-5.text-dark Aucun tweet disponible... 
+      else
+        each doc in docs
+          .card.bg-light.mb-3 
+            .card-body.p-3
+              p= doc.message
+            .card-footer.d-flex.justify-content-between
+              span= doc.createdAt
+              span= doc.author
+
+    .col-md-2
+      .card.bg-light.mb-3
+        .card-header 
+          h4 A édité...
+        .card-body
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laboriosam molestias, sint, ratione officiis temporibus labore accusamus perferendis voluptas aperiam ab fugit maxime adipisci doloremque eligendi quod. Nisi veniam fugit nam voluptatibus.
+
+

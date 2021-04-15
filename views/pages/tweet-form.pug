@@ -1,0 +1,27 @@
+extends ../layout
+
+block scripts 
+  script(src="/javascript/counter.js" defer)
+
+block content
+
+  .row.mb-5
+    h1.text-center.my-5.text-white Un truc à dire !?
+
+    .offset-md-2.col-md-8
+      .card.p-3 
+        .card-body
+          form(action="/tweets/new/traitement", method="post")
+            .form-group 
+              label.form-label(for="contentMessage") Avez-vous un truc à dire !?
+                span(id="counter") 0/256
+              textarea(id="contentMessage" name="contentMessage", rows="5").form-control.p-3 
+              div(id="feedbackMessage")
+              div(id="feedbackMessage")
+              
+
+            button.btn.btn-outline-primary.my-3.ms-auto.d-block(type="submit", id="btnSubmit") Envoyer
+
+            if errors
+              .alert.alert-danger.text-uppercase.text-danger= errors
+      
